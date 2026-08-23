@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: #0F241F;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.04), transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(255,255,255,0.04), transparent 40%),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(255,255,255,0.025) 0px,
+      rgba(255,255,255,0.025) 1px,
+      transparent 1px,
+      transparent 26px
+    );
+}
+
+/* Watermark-style brand text tiled behind the card, like security print on a ticket */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.5;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent 0,
+    transparent 140px,
+    rgba(255,255,255,0.035) 140px,
+    rgba(255,255,255,0.035) 141px
+  );
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+#root {
+  max-width: 1040px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--paper, #F5F6F1);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.06), 0 30px 60px -20px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 1080px) {
+  #root {
+    box-shadow: none;
+  }
+}
