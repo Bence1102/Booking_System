@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useAuth } from './context/AuthContext';
 import { useLanguage } from './context/LanguageContext';
+import { API_URL } from './api/config';
 import LoginForm from './components/LoginForm';
 import RegisterForm from './components/RegisterForm';
 import BookingForm from './components/BookingForm';
@@ -44,7 +45,7 @@ function App() {
   const [categoryFilter, setCategoryFilter] = useState('all');
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/resources')
+    fetch(`${API_URL}/resources`)
       .then((response) => response.json())
       .then((data) => setResources(data));
   }, []);

@@ -1,4 +1,4 @@
-const API_URL = 'http://127.0.0.1:8000/api';
+import { API_URL } from './config';
 
 export async function fetchResourceBookings(token, resourceId) {
   const response = await fetch(`${API_URL}/resources/${resourceId}/bookings`, {
