@@ -11,6 +11,12 @@ A projekt seedelt demo fiókokkal érkezik, hogy admin szerepkörben is ki lehes
 | Admin | `admin@example.com` | `password` |
 | Felhasználó | `user@example.com` | `password` |
 
+## Élő demo
+
+🔗 **[booking-system-ochre-alpha.vercel.app](https://booking-system-ochre-alpha.vercel.app)**
+
+> Nyilvános demo-környezet – a fenti demo hozzáférési adatokkal bárki kipróbálhatja, beleértve az admin felületet is.
+
 ## Funkciók
 
 - **Regisztráció / bejelentkezés** – token-alapú authentikáció (Laravel Sanctum)
