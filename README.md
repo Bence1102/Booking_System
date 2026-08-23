@@ -105,5 +105,7 @@ php artisan test
 
 ### Többnyelvű felület
 ![Magyar nyelv](screenshots/hu_language.png)
-![Angol nyelv](screenshots/en_language.png)
-![Német nyelv](screenshots/de_language.png)
+<p>
+  <img src="screenshots/en_language.png" width="48%" alt="Angol nyelvű nézet" />
+  <img src="screenshots/de_language.png" width="48%" alt="Német nyelvű nézet" />
+</p>
