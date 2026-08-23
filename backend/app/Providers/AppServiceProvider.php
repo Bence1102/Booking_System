@@ -19,6 +19,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        \Illuminate\Support\Facades\Mail::extend('sendgrid', function () {
+            return \Symfony\Component\Mailer\Transport::fromDsn(
+                'sendgrid+api://' . config('services.sendgrid.key') . '@default'
+            );
+        });
     }
 }
