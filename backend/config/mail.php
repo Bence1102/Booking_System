@@ -97,8 +97,8 @@ return [
             'retry_after' => 60,
         ],
 
-        'mailgun' => [
-            'transport' => 'mailgun',
+        'sendgrid' => [
+            'transport' => 'sendgrid',
         ],
 
     ],
