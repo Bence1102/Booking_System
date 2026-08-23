@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\WelcomeEmail;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
-class AuthController    
+class AuthController
 {
     public function register(Request $request)
     {
@@ -27,6 +29,8 @@ class AuthController
             'password' => Hash::make($request->password),
             'role' => 'user',
         ]);
+
+        Mail::to($user->email)->send(new WelcomeEmail($user));
 
         $token = $user->createToken('auth_token')->plainTextToken;
 
