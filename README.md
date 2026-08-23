@@ -16,6 +16,7 @@ A projekt seedelt demo fiókokkal érkezik, hogy admin szerepkörben is ki lehes
 🔗 **[booking-system-ochre-alpha.vercel.app](https://booking-system-ochre-alpha.vercel.app)**
 
 > Nyilvános demo-környezet – a fenti demo hozzáférési adatokkal bárki kipróbálhatja, beleértve az admin felületet is.
+**Megjegyzés:** a demo-környezet email-küldése SendGrid-en keresztül működik, saját domain hiányában előfordulhat, hogy a visszaigazoló email a Spam mappába kerül.
 
 ## Funkciók
 
